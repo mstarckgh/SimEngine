@@ -113,18 +113,12 @@ int main() {
     floor.setStaticFriction(0.5f);
     world.addBody(&floor);
 
-    // Klotz 1
+    // Box a
     RigidBody box_a(cube, {0, 1.0f, 0});
     box_a.getMaterial().color = glm::vec3(1.0f, 0.5f, 0.2f);    // Orange
     box_a.setIsStatic(false);
     world.addBody(&box_a);
 
-    // Klotz 2
-    RigidBody box_b(cube, {0, 5.0f, 0});
-    box_b.getMaterial().color = glm::vec3(0.5f, 1.0f, 0.2f);    // Grün
-    box_b.setIsStatic(false);
-    box_b.setMass(1.0f);
-    world.addBody(&box_b);
 
     // Simulations und Zeit Prameter
     const float dt = 0.0001f;
