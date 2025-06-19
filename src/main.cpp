@@ -114,9 +114,10 @@ int main() {
     world.addBody(&floor);
 
     // Box a
-    RigidBody box_a(cube, {0, 1.0f, 0});
+    RigidBody box_a(cube, {0, 3.0f, 0});
     box_a.getMaterial().color = glm::vec3(1.0f, 0.5f, 0.2f);    // Orange
     box_a.setIsStatic(false);
+    box_a.setEulerRotation({0, 0.5f, 3.1f});
     world.addBody(&box_a);
 
 
@@ -128,14 +129,14 @@ int main() {
     const glm::vec3 gravity(0.0f, -9.81f, 0.0f);
 
     // Custom forces
-    const glm::vec3 force_one(50.0f, 50.0f, 0.0f);
+    const glm::vec3 force_one(0.0f, 1.0f, 0.0f);
     const glm::vec3 force_two(-50.0f, 50.0f, 0.0f);
 
     // Custom torques
-    const glm::vec3 torque_one(10.0f, 0, 0);
+    const glm::vec3 torque_one(100.0f, 100.0f, 100.0f);
 
     float start_time = 2.0f;
-    float planned_duration = 0.2f;
+    float planned_duration = 500.0f;
     float duration = 0.0f;
 
 
@@ -170,6 +171,7 @@ int main() {
             
             if (currentTime >= start_time && duration <= planned_duration){
                 duration += dt;
+                box_a.applyTorque(torque_one);
             }
             world.simulate(dt);
             

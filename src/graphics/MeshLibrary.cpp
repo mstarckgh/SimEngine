@@ -60,7 +60,7 @@ void MeshLibrary::loadDefaultMeshes() {
         {{ 0.5f, -0.5f, -0.5f}, { 0.0f, -1.0f,  0.0f}},
         {{ 0.5f, -0.5f,  0.5f}, { 0.0f, -1.0f,  0.0f}},
         {{-0.5f, -0.5f,  0.5f}, { 0.0f, -1.0f,  0.0f}},
-        // Oberseite
+        // Obererseite
         {{-0.5f,  0.5f, -0.5f}, { 0.0f,  1.0f,  0.0f}},
         {{ 0.5f,  0.5f, -0.5f}, { 0.0f,  1.0f,  0.0f}},
         {{ 0.5f,  0.5f,  0.5f}, { 0.0f,  1.0f,  0.0f}},
@@ -68,12 +68,23 @@ void MeshLibrary::loadDefaultMeshes() {
     };
 
     std::vector<unsigned int> cubeIndices = {
-        0, 1, 2, 2, 3, 0,        // vorne
-        4, 5, 6, 6, 7, 4,        // hinten
-        8, 9,10,10,11, 8,        // links
-        12,13,14,14,15,12,        // rechts
-        16,17,18,18,19,16,        // unten
-        20,21,22,22,23,20         // oben
+        // Vorderseite
+        0, 1, 2,   2, 3, 0,
+        
+        // Rückseite
+        4, 6, 5,   4, 7, 6,
+        
+        // Linke Seite
+        8, 9, 10,   8, 10, 11,
+    
+        // Rechte Seite
+        12,15,13,  13,15,14,
+    
+        // Untererseite
+        16,17,18,  16,18,19,
+    
+        // Obererseite
+        20,22,21,  20,23,22
     };
 
     add("cube", Mesh(cubeVertices, cubeIndices));

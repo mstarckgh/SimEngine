@@ -195,9 +195,19 @@ void RigidBody::integratePosition(float dt) {
 }
 
 void RigidBody::integrateOrientation(float dt) {
+    if (glm::length(angularVelocity) == 0.0f) return;
+
     glm::quat w{0.0f, angularVelocity};
-    orientation += 0.5f * w * orientation * dt;
-    orientation = glm::normalize(orientation);
+    glm::quat delta =  0.5f * w * orientation * dt;
+
+    orientation += delta * dt;
+
+    if (glm::length2(orientation) > 0.0f) {
+        orientation = glm::normalize(orientation);
+    } else {
+        // Optional: Logging oder Fehlerbehandlung
+        orientation = glm::quat(1.0f, 0.0f, 0.0f, 0.0f); // Reset auf Identität
+    }
 }
 
 void RigidBody::resetForces() {
@@ -213,13 +223,7 @@ const glm::mat3 RigidBody::computeInertiaFromMesh() const {
     // Masseneigenschaften initialisieren
     glm::mat3 I(0.0f);
     float V = 0.0f;
-
-    // Lambda für das Volumen eines Tetraeders (v0, v1, v2, Ursprung)
-    auto signedTetraVolume = [](const glm::vec3& v0,
-                                 const glm::vec3& v1,
-                                 const glm::vec3& v2){
-        return glm::dot(v0, glm::cross(v1, v2)) * (1.0f / 6.0f);
-    };
+    glm::vec3 ref = glm::vec3(1.0f, 1.0f, 1.0f);
 
     // Mesh CPU-Daten Abgreifen
     const auto& verts = mesh->getCpuVertices();
@@ -230,7 +234,7 @@ const glm::mat3 RigidBody::computeInertiaFromMesh() const {
         const glm::vec3& v1 = verts[idx[i+1]].position;
         const glm::vec3& v2 = verts[idx[i+2]].position;
 
-        float dV = signedTetraVolume(v0, v1, v2);
+        float dV = glm::dot(v0, glm::cross(v1, v2)) / 6.0f;
         V += dV;
 
         // ∫x² dV = dV/10 * (Σ xi² + Σ xi xj)

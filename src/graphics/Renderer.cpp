@@ -44,7 +44,6 @@ void Renderer::draw(const Mesh& mesh, const glm::mat4& modelMatrix, const Materi
     }
 
     glm::vec3 tester = mesh.getCpuVertices()[0].position; 
-    std::cout << modelMatrix[0][3] << " " << modelMatrix[1][3] << " " << modelMatrix[2][3] << " " << std::endl;
     
     // Aktuelles Seitenverhältnis berechnen
     float aspect = static_cast<float>(viewportWidth) / static_cast<float>(viewportHeight);
