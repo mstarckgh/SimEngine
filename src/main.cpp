@@ -124,7 +124,7 @@ int main() {
     box_b.getMaterial().color = glm::vec3(0.5f, 1.0f, 0.2f);    // Grün
     box_b.setIsStatic(false);
     box_b.setMass(1.0f);
-    //world.addBody(&box_b);
+    world.addBody(&box_b);
 
     // Simulations und Zeit Prameter
     const float dt = 0.0001f;
