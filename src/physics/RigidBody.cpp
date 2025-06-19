@@ -268,6 +268,7 @@ const glm::mat3 RigidBody::computeInertiaFromMesh() const {
         0.0f,    0.0f,      scale.z
     );
 
+    std::cout << "Computed Inertia" << std::endl;
     // Rückgabe der Hauptträgheitsmomente
     return S * I * S;
 }

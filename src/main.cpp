@@ -115,7 +115,6 @@ int main() {
 
     // Box a
     RigidBody box_a(cube, {0, 1.0f, 0});
-    box_a.setScale({1.0f, 1.0f, 1.0f});
     box_a.getMaterial().color = glm::vec3(1.0f, 0.5f, 0.2f);    // Orange
     box_a.setIsStatic(false);
     world.addBody(&box_a);
