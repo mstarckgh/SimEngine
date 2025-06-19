@@ -501,30 +501,6 @@ src/physics/joints/Joint.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/SimEngine.dir/build.make CMakeFiles/SimEngine.dir/src/physics/joints/Joint.cpp.s
 .PHONY : src/physics/joints/Joint.cpp.s
 
-tests/aabb_test.o: tests/aabb_test.cpp.o
-.PHONY : tests/aabb_test.o
-
-# target to build an object file
-tests/aabb_test.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SimEngine.dir/build.make CMakeFiles/SimEngine.dir/tests/aabb_test.cpp.o
-.PHONY : tests/aabb_test.cpp.o
-
-tests/aabb_test.i: tests/aabb_test.cpp.i
-.PHONY : tests/aabb_test.i
-
-# target to preprocess a source file
-tests/aabb_test.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SimEngine.dir/build.make CMakeFiles/SimEngine.dir/tests/aabb_test.cpp.i
-.PHONY : tests/aabb_test.cpp.i
-
-tests/aabb_test.s: tests/aabb_test.cpp.s
-.PHONY : tests/aabb_test.s
-
-# target to generate assembly for a file
-tests/aabb_test.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SimEngine.dir/build.make CMakeFiles/SimEngine.dir/tests/aabb_test.cpp.s
-.PHONY : tests/aabb_test.cpp.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -577,9 +553,6 @@ help:
 	@echo "... src/physics/joints/Joint.o"
 	@echo "... src/physics/joints/Joint.i"
 	@echo "... src/physics/joints/Joint.s"
-	@echo "... tests/aabb_test.o"
-	@echo "... tests/aabb_test.i"
-	@echo "... tests/aabb_test.s"
 .PHONY : help
 
 
