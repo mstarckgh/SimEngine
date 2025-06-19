@@ -23,6 +23,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/SimEngine.dir/src/physics/RigidBody.cpp.o.d"
   "CMakeFiles/SimEngine.dir/src/physics/joints/Joint.cpp.o"
   "CMakeFiles/SimEngine.dir/src/physics/joints/Joint.cpp.o.d"
+  "CMakeFiles/SimEngine.dir/tests/aabb_test.cpp.o"
+  "CMakeFiles/SimEngine.dir/tests/aabb_test.cpp.o.d"
   "SimEngine"
   "SimEngine.pdb"
 )
