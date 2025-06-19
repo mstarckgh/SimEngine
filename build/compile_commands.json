@@ -72,6 +72,12 @@
   "output": "CMakeFiles/SimEngine.dir/src/physics/joints/Joint.cpp.o"
 },
 {
+  "directory": "/home/matthias/Nextcloud/Projekte/SimEngine/build",
+  "command": "/usr/bin/g++  -I/home/matthias/Nextcloud/Projekte/SimEngine/external/glfw/include -I/home/matthias/Nextcloud/Projekte/SimEngine/external/glad/include -I/home/matthias/Nextcloud/Projekte/SimEngine/external/glm -I/home/matthias/Nextcloud/Projekte/SimEngine/external/stb -I/home/matthias/Nextcloud/Projekte/SimEngine/include -g -std=gnu++20 -o CMakeFiles/SimEngine.dir/tests/aabb_test.cpp.o -c /home/matthias/Nextcloud/Projekte/SimEngine/tests/aabb_test.cpp",
+  "file": "/home/matthias/Nextcloud/Projekte/SimEngine/tests/aabb_test.cpp",
+  "output": "CMakeFiles/SimEngine.dir/tests/aabb_test.cpp.o"
+},
+{
   "directory": "/home/matthias/Nextcloud/Projekte/SimEngine/build/external/glfw/src",
   "command": "/usr/bin/gcc -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11 -I/home/matthias/Nextcloud/Projekte/SimEngine/external/glfw/include -I/home/matthias/Nextcloud/Projekte/SimEngine/external/glfw/src -I/home/matthias/Nextcloud/Projekte/SimEngine/build/external/glfw/src -g -std=c99 -fPIC -Wall -o CMakeFiles/glfw.dir/context.c.o -c /home/matthias/Nextcloud/Projekte/SimEngine/external/glfw/src/context.c",
   "file": "/home/matthias/Nextcloud/Projekte/SimEngine/external/glfw/src/context.c",

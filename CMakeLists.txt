@@ -18,6 +18,7 @@ include_directories(
 # Quellen automatishc einsammeln
 file(GLOB_RECURSE SOURCES
     src/*cpp
+    tests/*cpp
     external/glad/src/glad.c
 )
 add_executable(SimEngine ${SOURCES})

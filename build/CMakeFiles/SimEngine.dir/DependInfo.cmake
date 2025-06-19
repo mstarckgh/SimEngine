@@ -20,6 +20,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/matthias/Nextcloud/Projekte/SimEngine/src/physics/PhysicsWorld.cpp" "CMakeFiles/SimEngine.dir/src/physics/PhysicsWorld.cpp.o" "gcc" "CMakeFiles/SimEngine.dir/src/physics/PhysicsWorld.cpp.o.d"
   "/home/matthias/Nextcloud/Projekte/SimEngine/src/physics/RigidBody.cpp" "CMakeFiles/SimEngine.dir/src/physics/RigidBody.cpp.o" "gcc" "CMakeFiles/SimEngine.dir/src/physics/RigidBody.cpp.o.d"
   "/home/matthias/Nextcloud/Projekte/SimEngine/src/physics/joints/Joint.cpp" "CMakeFiles/SimEngine.dir/src/physics/joints/Joint.cpp.o" "gcc" "CMakeFiles/SimEngine.dir/src/physics/joints/Joint.cpp.o.d"
+  "/home/matthias/Nextcloud/Projekte/SimEngine/tests/aabb_test.cpp" "CMakeFiles/SimEngine.dir/tests/aabb_test.cpp.o" "gcc" "CMakeFiles/SimEngine.dir/tests/aabb_test.cpp.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.
