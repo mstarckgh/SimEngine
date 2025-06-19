@@ -2,7 +2,6 @@
 
 bool MeshLibrary::add(const std::string& name, Mesh mesh) {
     std::cout << "[MeshLibrary] Adding mesh: " << name << std::endl;
-    if (meshes.count(name)) return false;
     if (meshes.count(name)) {
         std::cerr << "[MeshLibrary] Warning: mesh already exists: " << name << std::endl;
         return false;
