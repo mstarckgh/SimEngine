@@ -138,9 +138,6 @@ bool RigidBody::getIsStatic() const {
     return isStatic;
 }
 
-
-// ==== Functions =====
-
 glm::mat4 RigidBody::getModelMatrix() const {
     glm::mat4 model = glm::mat4(1.0f);
     model = glm::translate(model, position);
@@ -148,6 +145,9 @@ glm::mat4 RigidBody::getModelMatrix() const {
     model = glm::scale(model, scale);
     return model;
 }
+
+
+// ==== Functions =====
 
 void RigidBody::applyForceAtPoint(const glm::vec3& force, const glm::vec3& point) {
     if (isStatic) return;
@@ -268,7 +268,6 @@ const glm::mat3 RigidBody::computeInertiaFromMesh() const {
         0.0f,    0.0f,      scale.z
     );
 
-    std::cout << "Computed Inertia" << std::endl;
-    // Rückgabe der Hauptträgheitsmomente
+    // Rückgabe der Trägheitsmomente
     return S * I * S;
 }
